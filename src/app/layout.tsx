@@ -1,8 +1,20 @@
+// Libraries
 import './globals.css'
 import type { Metadata } from 'next'
+import { Roboto } from 'next/font/google';
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+
+// Scss
+import '../../public/antd.min.css';
+import '@/scss/main.scss';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+// Components
+import { Providers } from '@/app/providers';
 
 export const metadata: Metadata = {
   title: 'Bittersweet',
@@ -15,8 +27,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <html lang="en" className="dark" suppressHydrationWarning>
+    <body className={inter.className}>
+      <Providers>{children}</Providers>
+    </body>
+  </html>
   )
 }
