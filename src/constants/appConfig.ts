@@ -1,0 +1,11 @@
+const API_DOMAIN = process.env.NEXT_PUBLIC_API_DOMAIN;
+const API_VERSION = process.env.NEXT_PUBLIC_VERSION;
+
+export const APP_CONFIG = {
+  SELLER_ID: 1132,
+  API_DOMAIN: API_DOMAIN,
+  API_VERSION: API_VERSION,
+  API_URL: `${API_DOMAIN}/be/${API_VERSION}`,
+  API_UPLOAD: `${API_DOMAIN}/be/upload`,
+  BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
+};
